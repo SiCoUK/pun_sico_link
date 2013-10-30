@@ -45,22 +45,22 @@ MA  02111-1307  USA
                     return '[url='.$full_url.']'.$link.'[/url]';
             }
             else
-                return '<a href="'.$full_url.'" target="_blank">'.$link.'</a>';
+                return '<a href="'.$full_url.'" target="_blank" rel="nofollow">'.$link.'</a>';
 	]]></hook>
 
         <hook id="vt_row_pre_post_contacts_merge"><![CDATA[
             if (isset($forum_page['post_contacts']['url']))
-                $forum_page['post_contacts']['url'] = str_replace('><span>', ' target="_blank"><span>', $forum_page['post_contacts']['url']);
+                $forum_page['post_contacts']['url'] = str_replace('><span>', ' target="_blank" rel="nofollow"><span>', $forum_page['post_contacts']['url']);
 	]]></hook>
 
         <hook id="pf_view_details_pre_header_load"><![CDATA[
             if (isset($forum_page['user_contact']['website']))
-                $forum_page['user_contact']['website'] = str_replace('rel="me"', 'rel="me" target="_blank"', $forum_page['user_contact']['website']);
+                $forum_page['user_contact']['website'] = str_replace('rel="me"', 'rel="me" target="_blank" rel="nofollow"', $forum_page['user_contact']['website']);
 	]]></hook>
 
         <hook id="pf_change_details_about_pre_header_load"><![CDATA[
             if (isset($forum_page['user_contact']['website']))
-                $forum_page['user_contact']['website'] = str_replace('rel="me"', 'rel="me" target="_blank"', $forum_page['user_contact']['website']);
+                $forum_page['user_contact']['website'] = str_replace('rel="me"', 'rel="me" target="_blank" rel="nofollow"', $forum_page['user_contact']['website']);
 	]]></hook>
 
         <hook id="co_common"><![CDATA[

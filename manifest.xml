@@ -25,7 +25,7 @@ MA  02111-1307  USA
 -->
 
 <extension engine="1.0">
-    <id>show_links_blank</id>
+    <id>sico_link</id>
     <title>Link Tag Modifier</title>
     <version>1.2</version>
     <description>Open all links from posts, signatures and user websites in new windows and add rel=nofollow</description>
